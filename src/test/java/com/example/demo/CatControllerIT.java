@@ -6,13 +6,14 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
+import com.example.demo.data.Cat;
+import com.example.demo.service.request.CatCreateRequest;
 import com.google.common.primitives.Ints;
 import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 
 public class CatControllerIT extends BaseIT {
-
 
     @Test
     public void createCatMustWork() {
@@ -49,7 +50,6 @@ public class CatControllerIT extends BaseIT {
                 "age", is(50)
             );
     }
-
 
     @Test
     public void getAllCatsMustWork() {

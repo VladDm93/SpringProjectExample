@@ -1,6 +1,9 @@
-package com.example.demo;
+package com.example.demo.web;
 
 
+import com.example.demo.service.request.CatCreateRequest;
+import com.example.demo.service.response.CatDto;
+import com.example.demo.service.CatService;
 import io.swagger.annotations.Api;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;

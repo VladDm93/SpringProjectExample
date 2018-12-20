@@ -2,7 +2,4 @@ databaseChangeLog:
 
   # includeAll do nothing when run from jar or maven int tests. See also: https://liquibase.jira.com/browse/CORE-2863
 
-  # ============= RELEASE 1.0.0 ======================
-
-  #base
-  - include: { relativeToChangelogFile: true, file: cats.yaml }
+  - include: { relativeToChangelogFile: true, file: 001_cats_table.sql }

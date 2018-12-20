@@ -1,6 +1,9 @@
-package com.example.demo;
+package com.example.demo.service;
 
 
+import com.example.demo.data.Cat;
+import com.example.demo.service.request.CatCreateRequest;
+import com.example.demo.service.response.CatDto;
 import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

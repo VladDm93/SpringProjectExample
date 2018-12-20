@@ -1,18 +1,11 @@
-package com.example.demo;
+package com.example.demo.service.request;
 
-public class CatDto {
+import com.google.common.base.MoreObjects;
 
-    private long id;
+public class CatCreateRequest {
+
     private String name;
     private Integer age;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -28,5 +21,13 @@ public class CatDto {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+            .add("name", name)
+            .add("age", age)
+            .toString();
     }
 }

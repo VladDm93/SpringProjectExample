@@ -1,8 +1,9 @@
 package com.example.demo;
 
 
-import com.example.demo.containers.ContainerInitializer;
-import com.example.demo.containers.DatabaseConfigurer;
+import com.example.demo.containers.PostgresContainerRunner;
+import com.example.demo.containers.TestApplicationInitializer;
+import com.example.demo.data.CatRepository;
 import io.restassured.RestAssured;
 import org.junit.After;
 import org.junit.Before;
@@ -17,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("it")
-@ContextConfiguration(classes = DemoApplication.class, initializers = ContainerInitializer.class)
+@ContextConfiguration(classes = DemoApplication.class, initializers = TestApplicationInitializer.class)
 public abstract class BaseIT {
 
     @LocalServerPort
@@ -26,7 +27,7 @@ public abstract class BaseIT {
     @Autowired CatRepository catRepository;
 
     static {
-        DatabaseConfigurer.start();
+        PostgresContainerRunner.run();
     }
 
     @Before

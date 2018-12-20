@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.setup;
 
 import java.util.ArrayList;
 import org.springframework.context.annotation.Bean;
