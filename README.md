@@ -18,8 +18,7 @@ To show how to implement simple REST api using:
 2. Run ./mvn spring-boot:run 
 3. Go to http://localhost:8080/swagger-ui.html
 
-
-### How to run tests
+### Windows users. Attention!!!
 This project uses TestContainers (https://www.testcontainers.org/) in order to run integration tests with postgres. This can be a problem on windows. So you must specify database params:
 
 ```
